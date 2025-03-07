@@ -1,0 +1,52 @@
+$theme-colors: (
+  "custom-purple": #4f0f74,
+  "custom-purple-bg": #f3e5f5
+
+);
+
+.text-custom-purple {
+  color: #7E247E ;
+}
+
+
+.bg-custom-purple{
+  border-bottom-width: 15px;
+  border-color: #f3e5f5;
+}
+
+  .custom-table-header {
+    background-color: #E23350 ; 
+    border-color: #f3e5f5;
+  }
+  
+  .custom-table tbody tr.table-custom {
+    border-color: #f3e5f5;
+  }
+  
+  .custom-table tbody tr:hover {
+    border-color: #f3e5f5;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem ; 
+  }
+  
+
+.text-custom-red {
+  color: #E83D46 ;
+}
+
+.bg-custom-pink {
+  background-color: #f1ebef ;
+}
+
+
+.bg-custom-model {
+  background-color: #f5dafc ;
+}
+
+.border-custom-maroon {
+  border-color: #BB2D67 ;
+}
+
+@import "~bootstrap/scss/bootstrap";
