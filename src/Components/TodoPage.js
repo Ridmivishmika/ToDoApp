@@ -61,7 +61,7 @@ function ToDoPage() {
     if (error) return <div className="d-flex justify-content-center align-items-center vh-100"><p className="text-danger fs-4">Error: {error}</p></div>;
 
     return (
-        <div className="bg-custom-pink pe-5 ps-5">
+        <div className="bg-custom-pink  "style={{ padding: "5%" }}>
             <Navigationbar />
             <Row className="pt-5">
                 <Col>
@@ -131,32 +131,30 @@ function ToDoPage() {
     />
 </Pagination>
 
+<Modal show={showModel} onHide={CloseTodo} centered className="custom-modal">
+    <Modal.Header className="bg-custom-model rounded-top pt-5 pe-5 ps-5" closeButton>
+        <Modal.Title>To-Do Details</Modal.Title>
+    </Modal.Header>
+    <Modal.Body className="bg-custom-model  rounded-bottom pb-5 pe-5 ps-5"> 
+        {selectedTodo && (
+            <>
+                <p><strong>ID:</strong> {selectedTodo.id}</p>
+                <p><strong>User ID:</strong> {selectedTodo.userId}</p>
+                <p><strong>Title:</strong> {selectedTodo.title}</p>
+                <p>
+                    <strong>Status:</strong>{" "}
+                    <Badge bg={selectedTodo.completed ? "success" : "danger"}>
+                        {selectedTodo.completed ? "Completed" : "Pending"}
+                    </Badge>
+                </p>
+            </>
+        )}
+    </Modal.Body>
+</Modal>
 
-            <Modal show={showModel} onHide={CloseTodo}>
-                <Modal.Header className="bg-custom-model">
-                    <Modal.Title>To-Do Details</Modal.Title>
-                </Modal.Header>
-                <Modal.Body className="bg-custom-model"> 
-                    {selectedTodo && (
-                        <>
-                            <p><strong>ID:</strong> {selectedTodo.id}</p>
-                            <p><strong>User ID:</strong> {selectedTodo.userId}</p>
-                            <p><strong>Title:</strong> {selectedTodo.title}</p>
-                            <p>
-                                <strong>Status:</strong>{" "}
-                                <Badge bg={selectedTodo.completed ? "success" : "danger"}>
-                                    {selectedTodo.completed ? "Completed" : "Pending"}
-                                </Badge>
-                            </p>
-                        </>
-                    )}
-                </Modal.Body>
-                <Modal.Footer className="bg-custom-pink">
-                    <Button className="bg-custom-purple text-white" onClick={CloseTodo}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+
+
+
         </div>
     );
 }

@@ -22,7 +22,7 @@ function Login() {
     };
 
     return (
-        <Container fluid className="min-vh-100 p-5 bg-custom-pink pe-5">
+        <Container fluid className="min-vh-100 bg-custom-pink " style={{ padding: "10%" }}>
             <Row className="w-100">
                 <Col xs={12} sm={6} className="d-flex justify-content-center align-items-center">
                     <p className="fw-bold display-3 display-md-2 display-lg-1 text-center text-custom-purple">
